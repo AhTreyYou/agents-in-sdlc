@@ -3,7 +3,7 @@ title: "Lección 2 - Añadir valoraciones por estrellas: una mejora rápida"
 description: "Inicia tu primera sesión de agente en la aplicación GitHub Copilot, realiza un pequeño cambio en las tarjetas de los juegos y combínalo como tu primera solicitud de incorporación de cambios."
 authors:
   - geektrainer
-lastUpdated: 2026-07-09
+lastUpdated: 2026-10-22
 ---
 
 En la lección anterior recorriste el espacio de trabajo y utilizaste un chat rápido. Ahora es el momento de iniciar una **sesión de agente** y realizar el primer cambio en el proyecto. Será un cambio pequeño: los juegos ya tienen una valoración por estrellas en sus datos, pero las tarjetas de la página de inicio todavía no la muestran. Pedirás al agente que la muestre, revisarás el cambio y lo combinarás como tu primera solicitud de incorporación de cambios.
@@ -31,15 +31,15 @@ Dentro de una sesión verás tres elementos: la **conversación** con el agente,
 Vamos a iniciar una sesión nueva para comenzar a explorar el proyecto e implementar la funcionalidad. En una [lección anterior][prior-lesson] añadiste el proyecto desde su repositorio de GitHub. Crearemos una sesión nueva para ese repositorio y solicitaremos el cambio.
 
 1. Vuelve a la aplicación GitHub Copilot o ábrela.
-2. Selecciona **+** junto a **Projects**.
+2. Selecciona **+** en la parte superior de la barra lateral para iniciar una sesión.
 3. Selecciona `tailspin-toys` como repositorio.
-4. Elige **new working tree** y el modo **Interactive** debajo del cuadro de indicaciones. Utiliza la indicación siguiente para solicitar el cambio:
+4. Elige un **new working tree** y el modo **Interactive** debajo del cuadro de indicaciones. Utiliza el mensaje siguiente para solicitar el cambio:
 
     ```plaintext
-    Show each game's starRating out of 5 in the game cards on the list page. If the rating is null, show "No rating yet". Keep the card layout as it is, add tests, and run the relevant checks.
+    Muestra la valoración `starRating` de cada juego sobre 5 en las tarjetas de la página de listado. Si la valoración es `null`, muestra "No rating yet". Mantén el diseño actual de las tarjetas, añade pruebas y ejecuta las comprobaciones pertinentes.
     ```
 
-5. Pulsa <kbd>Enter</kbd> para enviar la indicación a Copilot.
+5. Pulsa <kbd>Enter</kbd> para enviar el mensaje a Copilot.
 
 La aplicación Copilot comienza por crear un árbol de trabajo nuevo, una copia aislada del proyecto. Después explora el proyecto, localiza los archivos que debe actualizar para añadir la funcionalidad y crea el código necesario. Ya has añadido una nueva funcionalidad con la aplicación Copilot.
 
@@ -47,7 +47,7 @@ La aplicación Copilot comienza por crear un árbol de trabajo nuevo, una copia 
 
 Todos los cambios generados por IA deben revisarse antes de combinarlos, incluso los más pequeños. Vamos a explorar los cambios directamente en la aplicación Copilot.
 
-1. En la esquina superior derecha de la aplicación, selecciona **Toggle review panel**. Se abrirá la pantalla de diferencias con todos los cambios pendientes realizados por Copilot.
+1. En la esquina superior derecha de la aplicación, selecciona **Toggle review panel**. En el panel que se abre, selecciona **Changes** para ver los archivos modificados y sus diferencias.
 
     ![Barra de herramientas superior de la aplicación GitHub Copilot con una flecha que señala el botón Toggle review panel situado a la derecha de Create PR](../../../_images/app-2-review-panel.png)
 
@@ -77,28 +77,29 @@ Por supuesto, no basta con leer el código y dar por hecho que funciona. Vamos a
 > [!TIP]
 > Un lienzo es un widget interactivo disponible dentro de la aplicación Copilot. Más adelante explorarás algunos personalizados e incluso crearás uno, pero por ahora utilizaremos el lienzo de navegador integrado.
 
-1. Utiliza la siguiente indicación para pedir a Copilot que inicie la aplicación y abra la página en el lienzo de navegador:
+1. Utiliza el mensaje siguiente para pedir a Copilot que inicie la aplicación y abra la página en el lienzo de navegador:
 
     ```plaintext
-    Start the app and open it in the browser canvas.
+    Inicia la aplicación y ábrela en el lienzo del navegador.
     ```
 
 2. En unos instantes, la aplicación se iniciará y se abrirá una ventana de navegador dentro de la aplicación Copilot.
 3. Confirma que las tarjetas de juegos valorados muestran su puntuación sobre cinco.
-4. Cuando termines, pide a Copilot que detenga el servidor de desarrollo que ha iniciado para esta sesión con la indicación siguiente:
+4. Cuando termines, pide a Copilot que detenga el servidor de desarrollo de la sesión y cierre el lienzo del navegador:
 
     ```plaintext
-    Stop the dev server and close the browser canvas.
+    Detén el servidor de desarrollo y cierra el lienzo del navegador.
     ```
 
 ## Abrir y combinar tu primera solicitud de incorporación de cambios
 
 1. Selecciona **Create PR** en la esquina superior derecha.
 2. Si se solicita, selecciona **Sign in with your browser** y sigue las indicaciones para autenticarte.
-3. Copilot comenzará a crear la PR.
-4. Selecciona la burbuja **PR** situada justo encima del chat para abrir la solicitud en el panel de revisión. Puedes revisarla aquí según sea necesario.
-5. Cuando esté lista, selecciona **Ready to merge**.
-6. Selecciona **Merge pull request** en el nuevo cuadro de diálogo para combinar la solicitud.
+3. Si Copilot explica que la directiva del repositorio requiere una incidencia asociada antes de crear la PR, confirma que debe seguir ese proceso.
+4. Copilot empezará a crear la PR.
+5. Selecciona la burbuja **PR** situada justo encima del chat para abrir la solicitud en el panel de revisión y examínala.
+6. Cuando esté lista, selecciona **Ready to merge**.
+7. En el cuadro de diálogo que aparece, selecciona **Merge pull request** para combinarla.
 
 ## Resumen y pasos siguientes
 

@@ -83,7 +83,7 @@ Con el archivo de instrucciones actualizado, observa su efecto en el código que
 1. Pide a Copilot que utilice los archivos de instrucciones para adaptar el código a los nuevos requisitos:
 
    ```plaintext
-   We just updated our instructions and code guidance. Can you please update the code you generated to match that guidance?
+   Acabamos de actualizar las instrucciones y las directrices de código. ¿Puedes actualizar el código que has generado para que se ajuste a ellas?
    ```
 
 2. Selecciona **Changes** en la esquina superior derecha para abrir los cambios de código.
